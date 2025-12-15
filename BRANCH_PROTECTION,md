@@ -1,0 +1,17 @@
+# Branch Protection & Merge Policy
+
+## Main Branch Protection
+The `main` branch should be protected with the following rules:
+- Require pull request before merging
+- Require status checks to pass before merging
+  - CI workflow
+  - CodeQL workflow
+- Require branches to be up to date before merging
+
+## Purpose
+These protections ensure:
+- No unreviewed code reaches production
+- All quality gates are enforced
+- CI and security checks are mandatory
+
+This mirrors industry-standard DevOps governance practices.
