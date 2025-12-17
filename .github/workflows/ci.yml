@@ -5,12 +5,16 @@ on:
     branches: [ "main" ]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   build-test-lint:
     name: Node ${{ matrix.node-version }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest]
         node-version: [18.x, 20.x]
@@ -28,8 +32,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run Tests
+        run: npm test
+
       - name: Run Linter (Code Quality)
         run: npm run lint
 
-      - name: Run Tests
-        run: npm test
+      - name: CI Summary
+        run: |
+          echo "CI completed successfully on Node ${{ matrix.node-version }} running on ${{ matrix.os }}" >> $GITHUB_STEP_SUMMARY
