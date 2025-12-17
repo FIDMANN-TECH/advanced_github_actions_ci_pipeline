@@ -113,7 +113,11 @@ At the end of each matrix job, a summary is generated using GitHub Actions’ bu
   run: |
     echo "CI completed successfully on Node ${{ matrix.node-version }} running on ${{ matrix.os }}" >> $GITHUB_STEP_SUMMARY
 
+<<<<<<< Updated upstream
 ## Benefits
+=======
+### Benefits
+>>>>>>> Stashed changes
 
 Improves pipeline observability
 
@@ -170,6 +174,7 @@ Industry-standard CI best practices
 ## 🏁 Conclusion
 
 This CI pipeline reflects a production-ready approach to continuous integration.
+<<<<<<< Updated upstream
 By combining matrix builds, automated quality checks, and pull request enforcement, the workflow ensures that only reliable and high-quality code is merged into the main branch.
 
 ## Below are screenshots of workflow:
@@ -188,3 +193,6 @@ By combining matrix builds, automated quality checks, and pull request enforceme
 ![pull-request-merged-success](./img/13_pull_request_merged_successfully.png)
 ![ci-matrix-run-on-pull-request](./img/14_ci_matrix_run_on_pull_request.png)
 ![ci-summary-output](./img/15_ci_summary_output.png)
+=======
+By combining matrix builds, automated quality checks, and pull request enforcement, the workflow ensures that only reliable and high-quality code is merged into the main branch.
+>>>>>>> Stashed changes
