@@ -113,11 +113,7 @@ At the end of each matrix job, a summary is generated using GitHub Actions’ bu
   run: |
     echo "CI completed successfully on Node ${{ matrix.node-version }} running on ${{ matrix.os }}" >> $GITHUB_STEP_SUMMARY
 
-<<<<<<< Updated upstream
 ## Benefits
-=======
-### Benefits
->>>>>>> Stashed changes
 
 Improves pipeline observability
 
